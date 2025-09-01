@@ -215,3 +215,4 @@ python manage.py clearsessions
 - Uses SQLite3 database (file-based)
 - Fine calculation: 10 per day after 15 days
 - Book issue period: 15 days
+- No external dependencies beyond Django
