@@ -1,0 +1,55 @@
+[
+  {
+    "model": "home.addbook",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "bookid": "BK001",
+      "bookname": "Python Programming",
+      "subject": "Computer Science",
+      "category": "Not-Issued"
+    }
+  },
+  {
+    "model": "home.addbook",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "bookid": "BK002",
+      "bookname": "Database Management",
+      "subject": "Information Technology",
+      "category": "Not-Issued"
+    }
+  },
+  {
+    "model": "home.addbook",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "bookid": "BK003",
+      "bookname": "Web Development",
+      "subject": "Computer Science",
+      "category": "Issued"
+    }
+  },
+  {
+    "model": "home.addstudent",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "sname": "Dylan Tran",
+      "studentid": "S394100"
+    }
+  },
+  {
+    "model": "home.issuebook",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "studentid": "S394100",
+      "book1": "BK003",
+      "issuedate": "2024-08-15",
+      "expirydate": "2024-08-30"
+    }
+  }
+]
