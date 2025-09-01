@@ -142,7 +142,7 @@ python manage.py runserver
 - **IssueBook**: Book issuing records
 - **ReturnBook**: Book return records
 
-## 📊 Available Functions
+## ƒ() Available Functions
 
 ### Authentication
 
