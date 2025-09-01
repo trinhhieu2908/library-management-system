@@ -216,3 +216,6 @@ python manage.py clearsessions
 - Fine calculation: 10 per day after 15 days
 - Book issue period: 15 days
 - No external dependencies beyond Django
+
+## workflow Test
+- Testing the workflow
