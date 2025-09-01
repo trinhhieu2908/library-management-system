@@ -132,7 +132,7 @@ python manage.py runserver
 
 - **Dashboard**: View all books with status
 - **View Issued Book**: See issued books with fines
-- **View Student**: Browse all students
+- **View Student**: View all students
 
 ## 🗄️ Database Models
 
