@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['prt582-library-management-system.onrender.com', 'localhost', '127.0.0.1']
 
+# CSRF settings for Render deployment
+CSRF_TRUSTED_ORIGINS = ['https://prt582-library-management-system.onrender.com']
 
 # Application definition
 
