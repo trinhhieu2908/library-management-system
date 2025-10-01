@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.8.20 on darwin)" generated="2025-10-01T19:02:01.081513" rpa="false" schemaversion="5">
+<suite id="s1" name="Smoke Tests" source="/Users/dylan/DATA/studying/PRT582-Software-process-tools/library-management-system/tests/smoke_tests.robot">
+<kw name="Open Library System" owner="common_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-01T19:02:01.163851" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8000'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-01T19:02:01.163734" elapsed="6.890987"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-01T19:02:08.055011" elapsed="0.358198"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-01T19:02:08.413450" elapsed="0.000692"/>
+</kw>
+<doc>Opens the Library Management System</doc>
+<status status="PASS" start="2025-10-01T19:02:01.163453" elapsed="7.250768"/>
+</kw>
+<test id="s1-t1" name="Verify Homepage Loads" line="12">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
+<arg>1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-10-01T19:02:08.414585" elapsed="0.000135"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-01T19:02:08.414894" level="INFO">Opening url 'http://localhost:8000'</msg>
+<arg>${BASE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-01T19:02:08.414816" elapsed="1.012504"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>TechVidvan Library Management</arg>
+<arg>${SHORT_TIMEOUT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-01T19:02:09.428487" elapsed="1.017482"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-01T19:02:12.469430" level="INFO">Current page contains text 'TechVidvan Library Management'.</msg>
+<arg>TechVidvan Library Management</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-10-01T19:02:10.447096" elapsed="2.022829"/>
+</kw>
+<doc>Test that the homepage loads successfully</doc>
+<status status="PASS" start="2025-10-01T19:02:08.414286" elapsed="4.056710"/>
+</test>
+<test id="s1-t2" name="Verify Login Page Loads" line="18">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
+<arg>1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-10-01T19:02:12.473428" elapsed="0.000622"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-01T19:02:12.474676" level="INFO">Opening url 'http://localhost:8000/stafflogin/'</msg>
+<arg>${BASE_URL}/stafflogin/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-01T19:02:12.474378" elapsed="1.035523"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_TITLE}</arg>
+<arg>${SHORT_TIMEOUT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-01T19:02:13.510939" elapsed="1.014949"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-01T19:02:16.549080" level="INFO">Current page contains text 'Staff Login'.</msg>
+<arg>${LOGIN_PAGE_TITLE}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-10-01T19:02:14.526978" elapsed="2.022595"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-01T19:02:17.568458" level="INFO">Current page contains element 'name:loginuname'.</msg>
+<arg>name:loginuname</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-01T19:02:16.550524" elapsed="1.018434"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-01T19:02:18.587185" level="INFO">Current page contains element 'name:loginpassword'.</msg>
+<arg>name:loginpassword</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-01T19:02:17.569942" elapsed="1.017362"/>
+</kw>
+<doc>Test that the login page loads successfully</doc>
+<status status="PASS" start="2025-10-01T19:02:12.472204" elapsed="6.115274"/>
+</test>
+<kw name="Close Library System" owner="common_keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-01T19:02:18.588026" elapsed="1.067991"/>
+</kw>
+<doc>Closes the browser</doc>
+<status status="PASS" start="2025-10-01T19:02:18.587877" elapsed="1.068317"/>
+</kw>
+<doc>Smoke tests to verify basic system functionality</doc>
+<status status="PASS" start="2025-10-01T19:02:01.082003" elapsed="18.574238"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Smoke Tests" id="s1" pass="2" fail="0" skip="0">Smoke Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
