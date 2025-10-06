@@ -6,14 +6,14 @@ Resource  common_variables.robot
 
 Suite Setup    Open Library System
 Suite Teardown    Close Library System
-Test Setup    Set Selenium Speed    0.2s
+Test Setup    Set Selenium Speed    0.5s
 
 *** Variables ***
 # Signup Test Data
-${NEW_USERNAME}          user002
+${NEW_USERNAME}          user003
 ${NEW_FIRST_NAME}        Test
-${NEW_LAST_NAME}         User2
-${NEW_EMAIL}             user002@gmail.com
+${NEW_LAST_NAME}         User3
+${NEW_EMAIL}             user003@gmail.com
 ${NEW_PHONE}             0401234567
 ${NEW_PASSWORD}          TestPass123
 ${INVALID_USERNAME}      test-user@123
