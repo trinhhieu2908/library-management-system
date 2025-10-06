@@ -1,111 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.8.20 on darwin)" generated="2025-10-01T19:02:01.081513" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.8.20 on darwin)" generated="2025-10-06T14:16:34.681688" rpa="false" schemaversion="5">
 <suite id="s1" name="Smoke Tests" source="/Users/dylan/DATA/studying/PRT582-Software-process-tools/library-management-system/tests/smoke_tests.robot">
 <kw name="Open Library System" owner="common_keywords" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-10-01T19:02:01.163851" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8000'.</msg>
+<msg time="2025-10-06T14:16:34.734538" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8000'.</msg>
+<msg time="2025-10-06T14:16:35.362549" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-06T14:16:35.362726" level="FAIL">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=140.0.7339.214)
+Stacktrace:
+0   chromedriver                        0x0000000102993274 cxxbridge1$str$ptr + 2882596
+1   chromedriver                        0x000000010298b1a0 cxxbridge1$str$ptr + 2849616
+2   chromedriver                        0x00000001024b5180 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 73420
+3   chromedriver                        0x00000001024ad5b4 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 41728
+4   chromedriver                        0x00000001024a01d0 cxxbridge1$string$len + 4716
+5   chromedriver                        0x00000001024a1bd0 cxxbridge1$string$len + 11372
+6   chromedriver                        0x00000001024a0624 cxxbridge1$string$len + 5824
+7   chromedriver                        0x000000010249ff38 cxxbridge1$string$len + 4052
+8   chromedriver                        0x000000010249fcc4 cxxbridge1$string$len + 3424
+9   chromedriver                        0x000000010249dac0 chromedriver + 203456
+10  chromedriver                        0x000000010249e51c chromedriver + 206108
+11  chromedriver                        0x00000001024b81e4 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 85808
+12  chromedriver                        0x000000010253e180 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 634572
+13  chromedriver                        0x000000010253d6c8 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 631828
+14  chromedriver                        0x00000001024f0188 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 315092
+15  chromedriver                        0x0000000102956c54 cxxbridge1$str$ptr + 2635268
+16  chromedriver                        0x0000000102959e6c cxxbridge1$str$ptr + 2648092
+17  chromedriver                        0x00000001029385d4 cxxbridge1$str$ptr + 2510724
+18  chromedriver                        0x000000010295a718 cxxbridge1$str$ptr + 2650312
+19  chromedriver                        0x0000000102929d7c cxxbridge1$str$ptr + 2451244
+20  chromedriver                        0x0000000102979dd4 cxxbridge1$str$ptr + 2779012
+21  chromedriver                        0x0000000102979f54 cxxbridge1$str$ptr + 2779396
+22  chromedriver                        0x000000010298adec cxxbridge1$str$ptr + 2848668
+23  libsystem_pthread.dylib             0x000000019b5bec0c _pthread_start + 136
+24  libsystem_pthread.dylib             0x000000019b5b9b80 thread_start + 8
+</msg>
 <arg>${BASE_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-10-01T19:02:01.163734" elapsed="6.890987"/>
+<status status="FAIL" start="2025-10-06T14:16:34.734429" elapsed="0.628741">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=140.0.7339.214)
+Stacktrace:
+0   chromedriver                        0x0000000102993274 cxxbridge1$str$ptr + 2882596
+1   chromedriver                        0x000000010298b1a0 cxxbridge1$str$ptr + 2849616
+2   chromedriver                        0x00000001024b5180 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 73420
+3   chromedriver                        0x00000001024ad5b4 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 41728
+4   chromedriver                        0x00000001024a01d0 cxxbridge1$string$len + 4716
+5   chromedriver                        0x00000001024a1bd0 cxxbridge1$string$len + 11372
+6   chromedriver                        0x00000001024a0624 cxxbridge1$string$len + 5824
+7   chromedriver                        0x000000010249ff38 cxxbridge1$string$len + 4052
+8   chromedriver                        0x000000010249fcc4 cxxbridge1$strin...
+    [ Message content over the limit has been removed. ]
+... _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 315092
+15  chromedriver                        0x0000000102956c54 cxxbridge1$str$ptr + 2635268
+16  chromedriver                        0x0000000102959e6c cxxbridge1$str$ptr + 2648092
+17  chromedriver                        0x00000001029385d4 cxxbridge1$str$ptr + 2510724
+18  chromedriver                        0x000000010295a718 cxxbridge1$str$ptr + 2650312
+19  chromedriver                        0x0000000102929d7c cxxbridge1$str$ptr + 2451244
+20  chromedriver                        0x0000000102979dd4 cxxbridge1$str$ptr + 2779012
+21  chromedriver                        0x0000000102979f54 cxxbridge1$str$ptr + 2779396
+22  chromedriver                        0x000000010298adec cxxbridge1$str$ptr + 2848668
+23  libsystem_pthread.dylib             0x000000019b5bec0c _pthread_start + 136
+24  libsystem_pthread.dylib             0x000000019b5b9b80 thread_start + 8</status>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-10-01T19:02:08.055011" elapsed="0.358198"/>
+<status status="NOT RUN" start="2025-10-06T14:16:35.363337" elapsed="0.000016"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>${TIMEOUT}</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2025-10-01T19:02:08.413450" elapsed="0.000692"/>
+<status status="NOT RUN" start="2025-10-06T14:16:35.363401" elapsed="0.000011"/>
 </kw>
 <doc>Opens the Library Management System</doc>
-<status status="PASS" start="2025-10-01T19:02:01.163453" elapsed="7.250768"/>
+<status status="FAIL" start="2025-10-06T14:16:34.734162" elapsed="0.629317">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=140.0.7339.214)
+Stacktrace:
+0   chromedriver                        0x0000000102993274 cxxbridge1$str$ptr + 2882596
+1   chromedriver                        0x000000010298b1a0 cxxbridge1$str$ptr + 2849616
+2   chromedriver                        0x00000001024b5180 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 73420
+3   chromedriver                        0x00000001024ad5b4 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 41728
+4   chromedriver                        0x00000001024a01d0 cxxbridge1$string$len + 4716
+5   chromedriver                        0x00000001024a1bd0 cxxbridge1$string$len + 11372
+6   chromedriver                        0x00000001024a0624 cxxbridge1$string$len + 5824
+7   chromedriver                        0x000000010249ff38 cxxbridge1$string$len + 4052
+8   chromedriver                        0x000000010249fcc4 cxxbridge1$strin...
+    [ Message content over the limit has been removed. ]
+... _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 315092
+15  chromedriver                        0x0000000102956c54 cxxbridge1$str$ptr + 2635268
+16  chromedriver                        0x0000000102959e6c cxxbridge1$str$ptr + 2648092
+17  chromedriver                        0x00000001029385d4 cxxbridge1$str$ptr + 2510724
+18  chromedriver                        0x000000010295a718 cxxbridge1$str$ptr + 2650312
+19  chromedriver                        0x0000000102929d7c cxxbridge1$str$ptr + 2451244
+20  chromedriver                        0x0000000102979dd4 cxxbridge1$str$ptr + 2779012
+21  chromedriver                        0x0000000102979f54 cxxbridge1$str$ptr + 2779396
+22  chromedriver                        0x000000010298adec cxxbridge1$str$ptr + 2848668
+23  libsystem_pthread.dylib             0x000000019b5bec0c _pthread_start + 136
+24  libsystem_pthread.dylib             0x000000019b5b9b80 thread_start + 8</status>
 </kw>
 <test id="s1-t1" name="Verify Homepage Loads" line="12">
-<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
-<arg>1s</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-10-01T19:02:08.414585" elapsed="0.000135"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-10-01T19:02:08.414894" level="INFO">Opening url 'http://localhost:8000'</msg>
-<arg>${BASE_URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-10-01T19:02:08.414816" elapsed="1.012504"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>TechVidvan Library Management</arg>
-<arg>${SHORT_TIMEOUT}</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-10-01T19:02:09.428487" elapsed="1.017482"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-10-01T19:02:12.469430" level="INFO">Current page contains text 'TechVidvan Library Management'.</msg>
-<arg>TechVidvan Library Management</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-10-01T19:02:10.447096" elapsed="2.022829"/>
-</kw>
 <doc>Test that the homepage loads successfully</doc>
-<status status="PASS" start="2025-10-01T19:02:08.414286" elapsed="4.056710"/>
+<status status="FAIL" start="2025-10-06T14:16:35.363541" elapsed="0.000274">Parent suite setup failed:
+WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=140.0.7339.214)
+Stacktrace:
+0   chromedriver                        0x0000000102993274 cxxbridge1$str$ptr + 2882596
+1   chromedriver                        0x000000010298b1a0 cxxbridge1$str$ptr + 2849616
+2   chromedriver                        0x00000001024b5180 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 73420
+3   chromedriver                        0x00000001024ad5b4 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 41728
+4   chromedriver                        0x00000001024a01d0 cxxbridge1$string$len + 4716
+5   chromedriver                        0x00000001024a1bd0 cxxbridge1$string$len + 11372
+6   chromedriver                        0x00000001024a0624 cxxbridge1$string$len + 5824
+7   chromedriver                        0x000000010249ff38 cxxbridge1$string$len + 4052
+8   chromedriver                        0x000000010249fcc4 cxxbridge1$strin...
+    [ Message content over the limit has been removed. ]
+... _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 315092
+15  chromedriver                        0x0000000102956c54 cxxbridge1$str$ptr + 2635268
+16  chromedriver                        0x0000000102959e6c cxxbridge1$str$ptr + 2648092
+17  chromedriver                        0x00000001029385d4 cxxbridge1$str$ptr + 2510724
+18  chromedriver                        0x000000010295a718 cxxbridge1$str$ptr + 2650312
+19  chromedriver                        0x0000000102929d7c cxxbridge1$str$ptr + 2451244
+20  chromedriver                        0x0000000102979dd4 cxxbridge1$str$ptr + 2779012
+21  chromedriver                        0x0000000102979f54 cxxbridge1$str$ptr + 2779396
+22  chromedriver                        0x000000010298adec cxxbridge1$str$ptr + 2848668
+23  libsystem_pthread.dylib             0x000000019b5bec0c _pthread_start + 136
+24  libsystem_pthread.dylib             0x000000019b5b9b80 thread_start + 8</status>
 </test>
 <test id="s1-t2" name="Verify Login Page Loads" line="18">
-<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
-<arg>1s</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-10-01T19:02:12.473428" elapsed="0.000622"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-10-01T19:02:12.474676" level="INFO">Opening url 'http://localhost:8000/stafflogin/'</msg>
-<arg>${BASE_URL}/stafflogin/</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-10-01T19:02:12.474378" elapsed="1.035523"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>${LOGIN_PAGE_TITLE}</arg>
-<arg>${SHORT_TIMEOUT}</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-10-01T19:02:13.510939" elapsed="1.014949"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-10-01T19:02:16.549080" level="INFO">Current page contains text 'Staff Login'.</msg>
-<arg>${LOGIN_PAGE_TITLE}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-10-01T19:02:14.526978" elapsed="2.022595"/>
-</kw>
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-10-01T19:02:17.568458" level="INFO">Current page contains element 'name:loginuname'.</msg>
-<arg>name:loginuname</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-10-01T19:02:16.550524" elapsed="1.018434"/>
-</kw>
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-10-01T19:02:18.587185" level="INFO">Current page contains element 'name:loginpassword'.</msg>
-<arg>name:loginpassword</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-10-01T19:02:17.569942" elapsed="1.017362"/>
-</kw>
 <doc>Test that the login page loads successfully</doc>
-<status status="PASS" start="2025-10-01T19:02:12.472204" elapsed="6.115274"/>
+<status status="FAIL" start="2025-10-06T14:16:35.363967" elapsed="0.000127">Parent suite setup failed:
+WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=140.0.7339.214)
+Stacktrace:
+0   chromedriver                        0x0000000102993274 cxxbridge1$str$ptr + 2882596
+1   chromedriver                        0x000000010298b1a0 cxxbridge1$str$ptr + 2849616
+2   chromedriver                        0x00000001024b5180 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 73420
+3   chromedriver                        0x00000001024ad5b4 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 41728
+4   chromedriver                        0x00000001024a01d0 cxxbridge1$string$len + 4716
+5   chromedriver                        0x00000001024a1bd0 cxxbridge1$string$len + 11372
+6   chromedriver                        0x00000001024a0624 cxxbridge1$string$len + 5824
+7   chromedriver                        0x000000010249ff38 cxxbridge1$string$len + 4052
+8   chromedriver                        0x000000010249fcc4 cxxbridge1$strin...
+    [ Message content over the limit has been removed. ]
+... _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 315092
+15  chromedriver                        0x0000000102956c54 cxxbridge1$str$ptr + 2635268
+16  chromedriver                        0x0000000102959e6c cxxbridge1$str$ptr + 2648092
+17  chromedriver                        0x00000001029385d4 cxxbridge1$str$ptr + 2510724
+18  chromedriver                        0x000000010295a718 cxxbridge1$str$ptr + 2650312
+19  chromedriver                        0x0000000102929d7c cxxbridge1$str$ptr + 2451244
+20  chromedriver                        0x0000000102979dd4 cxxbridge1$str$ptr + 2779012
+21  chromedriver                        0x0000000102979f54 cxxbridge1$str$ptr + 2779396
+22  chromedriver                        0x000000010298adec cxxbridge1$str$ptr + 2848668
+23  libsystem_pthread.dylib             0x000000019b5bec0c _pthread_start + 136
+24  libsystem_pthread.dylib             0x000000019b5b9b80 thread_start + 8</status>
 </test>
 <kw name="Close Library System" owner="common_keywords" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-10-01T19:02:18.588026" elapsed="1.067991"/>
+<status status="PASS" start="2025-10-06T14:16:35.364602" elapsed="0.068086"/>
 </kw>
 <doc>Closes the browser</doc>
-<status status="PASS" start="2025-10-01T19:02:18.587877" elapsed="1.068317"/>
+<status status="PASS" start="2025-10-06T14:16:35.364475" elapsed="0.068295"/>
 </kw>
 <doc>Smoke tests to verify basic system functionality</doc>
-<status status="PASS" start="2025-10-01T19:02:01.082003" elapsed="18.574238"/>
+<status status="FAIL" start="2025-10-06T14:16:34.682434" elapsed="0.750362">Suite setup failed:
+WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=140.0.7339.214)
+Stacktrace:
+0   chromedriver                        0x0000000102993274 cxxbridge1$str$ptr + 2882596
+1   chromedriver                        0x000000010298b1a0 cxxbridge1$str$ptr + 2849616
+2   chromedriver                        0x00000001024b5180 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 73420
+3   chromedriver                        0x00000001024ad5b4 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 41728
+4   chromedriver                        0x00000001024a01d0 cxxbridge1$string$len + 4716
+5   chromedriver                        0x00000001024a1bd0 cxxbridge1$string$len + 11372
+6   chromedriver                        0x00000001024a0624 cxxbridge1$string$len + 5824
+7   chromedriver                        0x000000010249ff38 cxxbridge1$string$len + 4052
+8   chromedriver                        0x000000010249fcc4 cxxbridge1$strin...
+    [ Message content over the limit has been removed. ]
+... _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 315092
+15  chromedriver                        0x0000000102956c54 cxxbridge1$str$ptr + 2635268
+16  chromedriver                        0x0000000102959e6c cxxbridge1$str$ptr + 2648092
+17  chromedriver                        0x00000001029385d4 cxxbridge1$str$ptr + 2510724
+18  chromedriver                        0x000000010295a718 cxxbridge1$str$ptr + 2650312
+19  chromedriver                        0x0000000102929d7c cxxbridge1$str$ptr + 2451244
+20  chromedriver                        0x0000000102979dd4 cxxbridge1$str$ptr + 2779012
+21  chromedriver                        0x0000000102979f54 cxxbridge1$str$ptr + 2779396
+22  chromedriver                        0x000000010298adec cxxbridge1$str$ptr + 2848668
+23  libsystem_pthread.dylib             0x000000019b5bec0c _pthread_start + 136
+24  libsystem_pthread.dylib             0x000000019b5b9b80 thread_start + 8</status>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Smoke Tests" id="s1" pass="2" fail="0" skip="0">Smoke Tests</stat>
+<stat name="Smoke Tests" id="s1" pass="0" fail="2" skip="0">Smoke Tests</stat>
 </suite>
 </statistics>
 <errors>
