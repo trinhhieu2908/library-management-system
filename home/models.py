@@ -29,8 +29,9 @@ class ReturnBook(models.Model):
     user=models.ForeignKey(User,on_delete=models.CASCADE)
     bookid2=models.CharField(max_length=20)
 class AddStudent(models.Model):
-    user=models.OneToOneField(User,on_delete=models.CASCADE)
-    sname=models.CharField(max_length=30)
-    studentid=models.CharField(max_length=20)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    sname = models.CharField(max_length=30)
+    studentid = models.CharField(max_length=20)
+
     def __str__(self):
-        return self.sname+'['+str(self.studentid)+']'
+        return f"{self.sname} [{self.studentid}]"

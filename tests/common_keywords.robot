@@ -15,7 +15,7 @@ Close Library System
 
 Navigate To Dashboard
     [Documentation]    Navigates to the dashboard
-    Go To    ${DASHBOARD_URL}/
+    Go To    ${DASHBOARD_URL}
 
 # Authentication Keywords
 Login
