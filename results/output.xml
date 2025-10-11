@@ -1,201 +1,644 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.8.20 on darwin)" generated="2025-10-06T14:16:34.681688" rpa="false" schemaversion="5">
-<suite id="s1" name="Smoke Tests" source="/Users/dylan/DATA/studying/PRT582-Software-process-tools/library-management-system/tests/smoke_tests.robot">
+<robot generator="Robot 7.3.2 (Python 3.8.20 on darwin)" generated="2025-10-11T14:45:04.547961" rpa="false" schemaversion="5">
+<suite id="s1" name="Student Management Test" source="/Users/dylan/DATA/studying/PRT582-Software-process-tools/library-management-system/tests/student_management_test.robot">
 <kw name="Open Library System" owner="common_keywords" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-10-06T14:16:34.734538" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8000'.</msg>
-<msg time="2025-10-06T14:16:35.362549" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-10-06T14:16:35.362726" level="FAIL">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=140.0.7339.214)
-Stacktrace:
-0   chromedriver                        0x0000000102993274 cxxbridge1$str$ptr + 2882596
-1   chromedriver                        0x000000010298b1a0 cxxbridge1$str$ptr + 2849616
-2   chromedriver                        0x00000001024b5180 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 73420
-3   chromedriver                        0x00000001024ad5b4 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 41728
-4   chromedriver                        0x00000001024a01d0 cxxbridge1$string$len + 4716
-5   chromedriver                        0x00000001024a1bd0 cxxbridge1$string$len + 11372
-6   chromedriver                        0x00000001024a0624 cxxbridge1$string$len + 5824
-7   chromedriver                        0x000000010249ff38 cxxbridge1$string$len + 4052
-8   chromedriver                        0x000000010249fcc4 cxxbridge1$string$len + 3424
-9   chromedriver                        0x000000010249dac0 chromedriver + 203456
-10  chromedriver                        0x000000010249e51c chromedriver + 206108
-11  chromedriver                        0x00000001024b81e4 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 85808
-12  chromedriver                        0x000000010253e180 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 634572
-13  chromedriver                        0x000000010253d6c8 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 631828
-14  chromedriver                        0x00000001024f0188 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 315092
-15  chromedriver                        0x0000000102956c54 cxxbridge1$str$ptr + 2635268
-16  chromedriver                        0x0000000102959e6c cxxbridge1$str$ptr + 2648092
-17  chromedriver                        0x00000001029385d4 cxxbridge1$str$ptr + 2510724
-18  chromedriver                        0x000000010295a718 cxxbridge1$str$ptr + 2650312
-19  chromedriver                        0x0000000102929d7c cxxbridge1$str$ptr + 2451244
-20  chromedriver                        0x0000000102979dd4 cxxbridge1$str$ptr + 2779012
-21  chromedriver                        0x0000000102979f54 cxxbridge1$str$ptr + 2779396
-22  chromedriver                        0x000000010298adec cxxbridge1$str$ptr + 2848668
-23  libsystem_pthread.dylib             0x000000019b5bec0c _pthread_start + 136
-24  libsystem_pthread.dylib             0x000000019b5b9b80 thread_start + 8
-</msg>
+<msg time="2025-10-11T14:45:04.600642" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8000'.</msg>
 <arg>${BASE_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="FAIL" start="2025-10-06T14:16:34.734429" elapsed="0.628741">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=140.0.7339.214)
-Stacktrace:
-0   chromedriver                        0x0000000102993274 cxxbridge1$str$ptr + 2882596
-1   chromedriver                        0x000000010298b1a0 cxxbridge1$str$ptr + 2849616
-2   chromedriver                        0x00000001024b5180 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 73420
-3   chromedriver                        0x00000001024ad5b4 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 41728
-4   chromedriver                        0x00000001024a01d0 cxxbridge1$string$len + 4716
-5   chromedriver                        0x00000001024a1bd0 cxxbridge1$string$len + 11372
-6   chromedriver                        0x00000001024a0624 cxxbridge1$string$len + 5824
-7   chromedriver                        0x000000010249ff38 cxxbridge1$string$len + 4052
-8   chromedriver                        0x000000010249fcc4 cxxbridge1$strin...
-    [ Message content over the limit has been removed. ]
-... _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 315092
-15  chromedriver                        0x0000000102956c54 cxxbridge1$str$ptr + 2635268
-16  chromedriver                        0x0000000102959e6c cxxbridge1$str$ptr + 2648092
-17  chromedriver                        0x00000001029385d4 cxxbridge1$str$ptr + 2510724
-18  chromedriver                        0x000000010295a718 cxxbridge1$str$ptr + 2650312
-19  chromedriver                        0x0000000102929d7c cxxbridge1$str$ptr + 2451244
-20  chromedriver                        0x0000000102979dd4 cxxbridge1$str$ptr + 2779012
-21  chromedriver                        0x0000000102979f54 cxxbridge1$str$ptr + 2779396
-22  chromedriver                        0x000000010298adec cxxbridge1$str$ptr + 2848668
-23  libsystem_pthread.dylib             0x000000019b5bec0c _pthread_start + 136
-24  libsystem_pthread.dylib             0x000000019b5b9b80 thread_start + 8</status>
+<status status="PASS" start="2025-10-11T14:45:04.600536" elapsed="0.873771"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="NOT RUN" start="2025-10-06T14:16:35.363337" elapsed="0.000016"/>
+<status status="PASS" start="2025-10-11T14:45:05.474606" elapsed="0.358630"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>${TIMEOUT}</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="NOT RUN" start="2025-10-06T14:16:35.363401" elapsed="0.000011"/>
+<status status="PASS" start="2025-10-11T14:45:05.833393" elapsed="0.000726"/>
 </kw>
 <doc>Opens the Library Management System</doc>
-<status status="FAIL" start="2025-10-06T14:16:34.734162" elapsed="0.629317">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=140.0.7339.214)
-Stacktrace:
-0   chromedriver                        0x0000000102993274 cxxbridge1$str$ptr + 2882596
-1   chromedriver                        0x000000010298b1a0 cxxbridge1$str$ptr + 2849616
-2   chromedriver                        0x00000001024b5180 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 73420
-3   chromedriver                        0x00000001024ad5b4 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 41728
-4   chromedriver                        0x00000001024a01d0 cxxbridge1$string$len + 4716
-5   chromedriver                        0x00000001024a1bd0 cxxbridge1$string$len + 11372
-6   chromedriver                        0x00000001024a0624 cxxbridge1$string$len + 5824
-7   chromedriver                        0x000000010249ff38 cxxbridge1$string$len + 4052
-8   chromedriver                        0x000000010249fcc4 cxxbridge1$strin...
-    [ Message content over the limit has been removed. ]
-... _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 315092
-15  chromedriver                        0x0000000102956c54 cxxbridge1$str$ptr + 2635268
-16  chromedriver                        0x0000000102959e6c cxxbridge1$str$ptr + 2648092
-17  chromedriver                        0x00000001029385d4 cxxbridge1$str$ptr + 2510724
-18  chromedriver                        0x000000010295a718 cxxbridge1$str$ptr + 2650312
-19  chromedriver                        0x0000000102929d7c cxxbridge1$str$ptr + 2451244
-20  chromedriver                        0x0000000102979dd4 cxxbridge1$str$ptr + 2779012
-21  chromedriver                        0x0000000102979f54 cxxbridge1$str$ptr + 2779396
-22  chromedriver                        0x000000010298adec cxxbridge1$str$ptr + 2848668
-23  libsystem_pthread.dylib             0x000000019b5bec0c _pthread_start + 136
-24  libsystem_pthread.dylib             0x000000019b5b9b80 thread_start + 8</status>
+<status status="PASS" start="2025-10-11T14:45:04.600276" elapsed="1.233909"/>
 </kw>
-<test id="s1-t1" name="Verify Homepage Loads" line="12">
-<doc>Test that the homepage loads successfully</doc>
-<status status="FAIL" start="2025-10-06T14:16:35.363541" elapsed="0.000274">Parent suite setup failed:
-WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=140.0.7339.214)
-Stacktrace:
-0   chromedriver                        0x0000000102993274 cxxbridge1$str$ptr + 2882596
-1   chromedriver                        0x000000010298b1a0 cxxbridge1$str$ptr + 2849616
-2   chromedriver                        0x00000001024b5180 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 73420
-3   chromedriver                        0x00000001024ad5b4 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 41728
-4   chromedriver                        0x00000001024a01d0 cxxbridge1$string$len + 4716
-5   chromedriver                        0x00000001024a1bd0 cxxbridge1$string$len + 11372
-6   chromedriver                        0x00000001024a0624 cxxbridge1$string$len + 5824
-7   chromedriver                        0x000000010249ff38 cxxbridge1$string$len + 4052
-8   chromedriver                        0x000000010249fcc4 cxxbridge1$strin...
-    [ Message content over the limit has been removed. ]
-... _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 315092
-15  chromedriver                        0x0000000102956c54 cxxbridge1$str$ptr + 2635268
-16  chromedriver                        0x0000000102959e6c cxxbridge1$str$ptr + 2648092
-17  chromedriver                        0x00000001029385d4 cxxbridge1$str$ptr + 2510724
-18  chromedriver                        0x000000010295a718 cxxbridge1$str$ptr + 2650312
-19  chromedriver                        0x0000000102929d7c cxxbridge1$str$ptr + 2451244
-20  chromedriver                        0x0000000102979dd4 cxxbridge1$str$ptr + 2779012
-21  chromedriver                        0x0000000102979f54 cxxbridge1$str$ptr + 2779396
-22  chromedriver                        0x000000010298adec cxxbridge1$str$ptr + 2848668
-23  libsystem_pthread.dylib             0x000000019b5bec0c _pthread_start + 136
-24  libsystem_pthread.dylib             0x000000019b5b9b80 thread_start + 8</status>
+<test id="s1-t1" name="Add Student" line="23">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
+<arg>0.1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-10-11T14:45:05.834547" elapsed="0.000128"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Login" owner="common_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:05.835217" level="INFO">Opening url 'http://localhost:8000/stafflogin/'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-11T14:45:05.835136" elapsed="0.118732"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_TITLE}</arg>
+<arg>${SHORT_TIMEOUT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-11T14:45:05.954082" elapsed="0.113704"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:06.068291" level="INFO">Typing text 'trinhhieu' into text field 'name:loginuname'.</msg>
+<arg>name:loginuname</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:06.067993" elapsed="0.417825"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:06.486285" level="INFO">Typing text '123456aA@' into text field 'name:loginpassword'.</msg>
+<arg>name:loginpassword</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:06.486039" elapsed="0.370780"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:06.857324" level="INFO">Clicking button 'Login'.</msg>
+<arg>Login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:06.857067" elapsed="0.587079"/>
+</kw>
+<doc>Logs in as staff</doc>
+<status status="PASS" start="2025-10-11T14:45:05.834949" elapsed="1.609355"/>
+</kw>
+<arg>Login</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-11T14:45:05.834793" elapsed="1.609572"/>
+</kw>
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="Navigate To Dashboard" owner="common_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:07.445205" level="INFO">Opening url 'http://localhost:8000/dashboard/'</msg>
+<arg>${DASHBOARD_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-11T14:45:07.445068" elapsed="0.124385"/>
+</kw>
+<doc>Navigates to the dashboard</doc>
+<status status="PASS" start="2025-10-11T14:45:07.444835" elapsed="0.124790"/>
+</kw>
+<arg>Navigate To Dashboard</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-10-11T14:45:07.444585" elapsed="0.125116"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:07.570244" level="INFO">Clicking link 'Add Student'.</msg>
+<arg>Add Student</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:07.569970" elapsed="0.391753"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:08.187190" level="INFO">Current page contains text 'Student name:'.</msg>
+<arg>Student name:</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-10-11T14:45:07.961991" elapsed="0.225358"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:08.412088" level="INFO">Current page contains text 'Student Id:'.</msg>
+<arg>Student Id:</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-10-11T14:45:08.187614" elapsed="0.224906"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:08.414143" level="INFO">Typing text 'Test Student' into text field 'name:sname'.</msg>
+<arg>name:sname</arg>
+<arg>Test Student</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:08.413351" elapsed="0.380576"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:08.795768" level="INFO">Typing text 'STU12345' into text field 'name:studentid'.</msg>
+<arg>name:studentid</arg>
+<arg>STU12345</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:08.794920" elapsed="0.369085"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:09.164427" level="INFO">Clicking button 'Submit'.</msg>
+<arg>Submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:09.164253" elapsed="0.485027"/>
+</kw>
+<doc>Add a student, view all students, and verify the student appears in the list.</doc>
+<status status="PASS" start="2025-10-11T14:45:05.834248" elapsed="3.815285"/>
 </test>
-<test id="s1-t2" name="Verify Login Page Loads" line="18">
-<doc>Test that the login page loads successfully</doc>
-<status status="FAIL" start="2025-10-06T14:16:35.363967" elapsed="0.000127">Parent suite setup failed:
-WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=140.0.7339.214)
-Stacktrace:
-0   chromedriver                        0x0000000102993274 cxxbridge1$str$ptr + 2882596
-1   chromedriver                        0x000000010298b1a0 cxxbridge1$str$ptr + 2849616
-2   chromedriver                        0x00000001024b5180 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 73420
-3   chromedriver                        0x00000001024ad5b4 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 41728
-4   chromedriver                        0x00000001024a01d0 cxxbridge1$string$len + 4716
-5   chromedriver                        0x00000001024a1bd0 cxxbridge1$string$len + 11372
-6   chromedriver                        0x00000001024a0624 cxxbridge1$string$len + 5824
-7   chromedriver                        0x000000010249ff38 cxxbridge1$string$len + 4052
-8   chromedriver                        0x000000010249fcc4 cxxbridge1$strin...
-    [ Message content over the limit has been removed. ]
-... _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 315092
-15  chromedriver                        0x0000000102956c54 cxxbridge1$str$ptr + 2635268
-16  chromedriver                        0x0000000102959e6c cxxbridge1$str$ptr + 2648092
-17  chromedriver                        0x00000001029385d4 cxxbridge1$str$ptr + 2510724
-18  chromedriver                        0x000000010295a718 cxxbridge1$str$ptr + 2650312
-19  chromedriver                        0x0000000102929d7c cxxbridge1$str$ptr + 2451244
-20  chromedriver                        0x0000000102979dd4 cxxbridge1$str$ptr + 2779012
-21  chromedriver                        0x0000000102979f54 cxxbridge1$str$ptr + 2779396
-22  chromedriver                        0x000000010298adec cxxbridge1$str$ptr + 2848668
-23  libsystem_pthread.dylib             0x000000019b5bec0c _pthread_start + 136
-24  libsystem_pthread.dylib             0x000000019b5b9b80 thread_start + 8</status>
+<test id="s1-t2" name="Check For Student" line="34">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
+<arg>0.1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-10-11T14:45:09.650036" elapsed="0.000182"/>
+</kw>
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="Navigate To Dashboard" owner="common_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:09.650786" level="INFO">Opening url 'http://localhost:8000/dashboard/'</msg>
+<arg>${DASHBOARD_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-11T14:45:09.650693" elapsed="0.118423"/>
+</kw>
+<doc>Navigates to the dashboard</doc>
+<status status="PASS" start="2025-10-11T14:45:09.650493" elapsed="0.118781"/>
+</kw>
+<arg>Navigate To Dashboard</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-10-11T14:45:09.650347" elapsed="0.118985"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:09.769771" level="INFO">Clicking link 'View Student'.</msg>
+<arg>View Student</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:09.769545" elapsed="0.387000"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Student Name</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-11T14:45:10.156753" elapsed="0.111136"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Student Id</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-11T14:45:10.268146" elapsed="0.111649"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:10.603679" level="INFO">Current page contains text 'Test Student'.</msg>
+<arg>Test Student</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-10-11T14:45:10.380775" elapsed="0.223385"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:10.829349" level="INFO">Current page contains text 'STU12345'.</msg>
+<arg>STU12345</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-10-11T14:45:10.605066" elapsed="0.224665"/>
+</kw>
+<kw name="Logout" owner="common_keywords">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:10.832063" level="INFO">Clicking link 'Log Out'.</msg>
+<arg>Log Out</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:10.831556" elapsed="0.367710"/>
+</kw>
+<doc>Logs out the staff user</doc>
+<status status="PASS" start="2025-10-11T14:45:10.830705" elapsed="0.368664"/>
+</kw>
+<doc>Check if the added student exists or not</doc>
+<status status="PASS" start="2025-10-11T14:45:09.649752" elapsed="1.549747"/>
+</test>
+<test id="s1-t3" name="Search Student Using Student ID" line="44">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
+<arg>0.1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-10-11T14:45:11.199879" elapsed="0.000154"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Login" owner="common_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:11.200535" level="INFO">Opening url 'http://localhost:8000/stafflogin/'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-11T14:45:11.200454" elapsed="0.114492"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_TITLE}</arg>
+<arg>${SHORT_TIMEOUT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-11T14:45:11.315152" elapsed="0.109723"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:11.425459" level="INFO">Typing text 'trinhhieu' into text field 'name:loginuname'.</msg>
+<arg>name:loginuname</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:11.425117" elapsed="0.372484"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:11.798332" level="INFO">Typing text '123456aA@' into text field 'name:loginpassword'.</msg>
+<arg>name:loginpassword</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:11.797900" elapsed="0.375600"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:12.174814" level="INFO">Clicking button 'Login'.</msg>
+<arg>Login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:12.174170" elapsed="0.399108"/>
+</kw>
+<doc>Logs in as staff</doc>
+<status status="PASS" start="2025-10-11T14:45:11.200265" elapsed="1.373151"/>
+</kw>
+<arg>Login</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-11T14:45:11.200129" elapsed="1.373337"/>
+</kw>
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="Navigate To Dashboard" owner="common_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:12.574154" level="INFO">Opening url 'http://localhost:8000/dashboard/'</msg>
+<arg>${DASHBOARD_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-11T14:45:12.574038" elapsed="0.118599"/>
+</kw>
+<doc>Navigates to the dashboard</doc>
+<status status="PASS" start="2025-10-11T14:45:12.573849" elapsed="0.118953"/>
+</kw>
+<arg>Navigate To Dashboard</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-10-11T14:45:12.573652" elapsed="0.119217"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:12.693346" level="INFO">Clicking link 'View Student'.</msg>
+<arg>View Student</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:12.693104" elapsed="0.375086"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Student Id</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-11T14:45:13.068505" elapsed="0.108710"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Student Name</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-11T14:45:13.178106" elapsed="0.111757"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:13.290283" level="INFO">Typing text 'STU12345' into text field 'name:query3'.</msg>
+<arg>name:query3</arg>
+<arg>STU12345</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:13.290094" elapsed="0.363768"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:13.655401" level="INFO">Clicking button 'Submit'.</msg>
+<arg>Submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:13.654728" elapsed="0.482362"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:14.356369" level="INFO">Current page contains text 'Test Student'.</msg>
+<arg>Test Student</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-10-11T14:45:14.137400" elapsed="0.219092"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:14.575589" level="INFO">Current page contains text 'STU12345'.</msg>
+<arg>STU12345</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-10-11T14:45:14.356709" elapsed="0.219252"/>
+</kw>
+<kw name="Logout" owner="common_keywords">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:14.578553" level="INFO">Clicking link 'Log Out'.</msg>
+<arg>Log Out</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:14.577955" elapsed="0.378681"/>
+</kw>
+<doc>Logs out the staff user</doc>
+<status status="PASS" start="2025-10-11T14:45:14.576983" elapsed="0.379844"/>
+</kw>
+<doc>Use search bar to look for newly added student</doc>
+<status status="PASS" start="2025-10-11T14:45:11.199645" elapsed="3.757426"/>
+</test>
+<test id="s1-t4" name="Add Student With Missing Name" line="57">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
+<arg>0.1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-10-11T14:45:14.957687" elapsed="0.000229"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Login" owner="common_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:14.958663" level="INFO">Opening url 'http://localhost:8000/stafflogin/'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-11T14:45:14.958543" elapsed="0.114768"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_TITLE}</arg>
+<arg>${SHORT_TIMEOUT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-11T14:45:15.073600" elapsed="0.112748"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:15.188218" level="INFO">Typing text 'trinhhieu' into text field 'name:loginuname'.</msg>
+<arg>name:loginuname</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:15.187158" elapsed="0.366527"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:15.554049" level="INFO">Typing text '123456aA@' into text field 'name:loginpassword'.</msg>
+<arg>name:loginpassword</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:15.553848" elapsed="0.358069"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:15.913195" level="INFO">Clicking button 'Login'.</msg>
+<arg>Login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:15.912561" elapsed="0.377781"/>
+</kw>
+<doc>Logs in as staff</doc>
+<status status="PASS" start="2025-10-11T14:45:14.958281" elapsed="1.332204"/>
+</kw>
+<arg>Login</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-11T14:45:14.958076" elapsed="1.332449"/>
+</kw>
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="Navigate To Dashboard" owner="common_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:16.291072" level="INFO">Opening url 'http://localhost:8000/dashboard/'</msg>
+<arg>${DASHBOARD_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-11T14:45:16.290987" elapsed="0.117421"/>
+</kw>
+<doc>Navigates to the dashboard</doc>
+<status status="PASS" start="2025-10-11T14:45:16.290837" elapsed="0.117665"/>
+</kw>
+<arg>Navigate To Dashboard</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-10-11T14:45:16.290671" elapsed="0.117867"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:16.408810" level="INFO">Clicking link 'Add Student'.</msg>
+<arg>Add Student</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:16.408667" elapsed="0.367540"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:16.993162" level="INFO">Current page contains text 'Student name:'.</msg>
+<arg>Student name:</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-10-11T14:45:16.776426" elapsed="0.217140"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:17.206699" level="INFO">Current page contains text 'Student Id:'.</msg>
+<arg>Student Id:</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-10-11T14:45:16.994294" elapsed="0.212555"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:17.207252" level="INFO">Typing text '''' into text field 'name:sname'.</msg>
+<arg>name:sname</arg>
+<arg>''</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:17.207065" elapsed="0.349309"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:17.556820" level="INFO">Typing text 'STU99999' into text field 'name:studentid'.</msg>
+<arg>name:studentid</arg>
+<arg>STU99999</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:17.556637" elapsed="0.345659"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:17.902797" level="INFO">Clicking button 'Submit'.</msg>
+<arg>Submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:17.902589" elapsed="0.491524"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:22.329407" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-11T14:45:22.329552" level="FAIL">Text 'Name is required' did not appear in 3 seconds.</msg>
+<arg>Name is required</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-10-11T14:45:18.394345" elapsed="3.937189">Text 'Name is required' did not appear in 3 seconds.</status>
+</kw>
+<doc>Try to add a student without a name, expect an error.</doc>
+<status status="FAIL" start="2025-10-11T14:45:14.957311" elapsed="7.375097">Text 'Name is required' did not appear in 3 seconds.</status>
+</test>
+<test id="s1-t5" name="Add Student With Invalid ID" line="69">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
+<arg>0.1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-10-11T14:45:22.332860" elapsed="0.000170"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Login" owner="common_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:22.333574" level="INFO">Opening url 'http://localhost:8000/stafflogin/'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-11T14:45:22.333484" elapsed="0.119357"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:23.280145" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-11T14:45:23.280289" level="FAIL">Text 'Staff Login' did not appear in 500 milliseconds.</msg>
+<arg>${LOGIN_PAGE_TITLE}</arg>
+<arg>${SHORT_TIMEOUT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-10-11T14:45:22.453096" elapsed="0.827318">Text 'Staff Login' did not appear in 500 milliseconds.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name:loginuname</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-11T14:45:23.280591" elapsed="0.000031"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name:loginpassword</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-11T14:45:23.280705" elapsed="0.000022"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-11T14:45:23.280800" elapsed="0.000018"/>
+</kw>
+<doc>Logs in as staff</doc>
+<status status="FAIL" start="2025-10-11T14:45:22.333292" elapsed="0.947616">Text 'Staff Login' did not appear in 500 milliseconds.</status>
+</kw>
+<arg>Login</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-11T14:45:22.333143" elapsed="0.947822"/>
+</kw>
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="Navigate To Dashboard" owner="common_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:23.281563" level="INFO">Opening url 'http://localhost:8000/dashboard/'</msg>
+<arg>${DASHBOARD_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-11T14:45:23.281457" elapsed="0.118887"/>
+</kw>
+<doc>Navigates to the dashboard</doc>
+<status status="PASS" start="2025-10-11T14:45:23.281265" elapsed="0.119250"/>
+</kw>
+<arg>Navigate To Dashboard</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-10-11T14:45:23.281092" elapsed="0.119497"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:23.401115" level="INFO">Clicking link 'Add Student'.</msg>
+<arg>Add Student</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:23.400844" elapsed="0.379286"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:23.999908" level="INFO">Current page contains text 'Student name:'.</msg>
+<arg>Student name:</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-10-11T14:45:23.780462" elapsed="0.219559"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:24.215738" level="INFO">Current page contains text 'Student Id:'.</msg>
+<arg>Student Id:</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-10-11T14:45:24.000228" elapsed="0.215888"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:24.217353" level="INFO">Typing text 'Invalid Student' into text field 'name:sname'.</msg>
+<arg>name:sname</arg>
+<arg>Invalid Student</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:24.216788" elapsed="0.370083"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:24.588544" level="INFO">Typing text '@@@@' into text field 'name:studentid'.</msg>
+<arg>name:studentid</arg>
+<arg>@@@@</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:24.587735" elapsed="0.354111"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:24.943416" level="INFO">Clicking button 'Submit'.</msg>
+<arg>Submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:24.942725" elapsed="0.471151"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:29.346120" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-11T14:45:29.346253" level="FAIL">Text 'Invalid student ID' did not appear in 3 seconds.</msg>
+<arg>Invalid student ID</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-10-11T14:45:25.414125" elapsed="3.932246">Text 'Invalid student ID' did not appear in 3 seconds.</status>
+</kw>
+<doc>Try to add a student with an invalid ID, expect an error.</doc>
+<status status="FAIL" start="2025-10-11T14:45:22.332592" elapsed="7.013956">Text 'Invalid student ID' did not appear in 3 seconds.</status>
+</test>
+<test id="s1-t6" name="Search For Nonexistent Student" line="81">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
+<arg>0.1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-10-11T14:45:29.347028" elapsed="0.000168"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Login" owner="common_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:29.347729" level="INFO">Opening url 'http://localhost:8000/stafflogin/'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-11T14:45:29.347651" elapsed="0.125659"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:30.309901" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-11T14:45:30.310069" level="FAIL">Text 'Staff Login' did not appear in 500 milliseconds.</msg>
+<arg>${LOGIN_PAGE_TITLE}</arg>
+<arg>${SHORT_TIMEOUT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-10-11T14:45:29.473512" elapsed="0.836707">Text 'Staff Login' did not appear in 500 milliseconds.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name:loginuname</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-11T14:45:30.310411" elapsed="0.000035"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name:loginpassword</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-11T14:45:30.310540" elapsed="0.000024"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-11T14:45:30.310645" elapsed="0.000023"/>
+</kw>
+<doc>Logs in as staff</doc>
+<status status="FAIL" start="2025-10-11T14:45:29.347460" elapsed="0.963291">Text 'Staff Login' did not appear in 500 milliseconds.</status>
+</kw>
+<arg>Login</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-11T14:45:29.347310" elapsed="0.963503"/>
+</kw>
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="Navigate To Dashboard" owner="common_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:30.311429" level="INFO">Opening url 'http://localhost:8000/dashboard/'</msg>
+<arg>${DASHBOARD_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-11T14:45:30.311320" elapsed="0.120931"/>
+</kw>
+<doc>Navigates to the dashboard</doc>
+<status status="PASS" start="2025-10-11T14:45:30.311131" elapsed="0.121289"/>
+</kw>
+<arg>Navigate To Dashboard</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-10-11T14:45:30.310946" elapsed="0.121552"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:30.433032" level="INFO">Clicking link 'View Student'.</msg>
+<arg>View Student</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:30.432759" elapsed="0.382126"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Student Id</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-11T14:45:30.815267" elapsed="0.110732"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Student Name</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-11T14:45:30.926877" elapsed="0.115165"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:31.042439" level="INFO">Typing text 'DOESNOTEXIST' into text field 'name:query3'.</msg>
+<arg>name:query3</arg>
+<arg>DOESNOTEXIST</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:31.042274" elapsed="0.347127"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:31.389889" level="INFO">Clicking button 'Submit'.</msg>
+<arg>Submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-11T14:45:31.389679" elapsed="0.475371"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-10-11T14:45:35.216852" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-11T14:45:35.216968" level="FAIL">Text 'Student not found' did not appear in 3 seconds.</msg>
+<arg>Student not found</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-10-11T14:45:31.865343" elapsed="3.351722">Text 'Student not found' did not appear in 3 seconds.</status>
+</kw>
+<doc>Search for a student ID that does not exist, expect not found message.</doc>
+<status status="FAIL" start="2025-10-11T14:45:29.346739" elapsed="5.870500">Text 'Student not found' did not appear in 3 seconds.</status>
 </test>
 <kw name="Close Library System" owner="common_keywords" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-10-06T14:16:35.364602" elapsed="0.068086"/>
+<status status="PASS" start="2025-10-11T14:45:35.217804" elapsed="0.167161"/>
 </kw>
 <doc>Closes the browser</doc>
-<status status="PASS" start="2025-10-06T14:16:35.364475" elapsed="0.068295"/>
+<status status="PASS" start="2025-10-11T14:45:35.217659" elapsed="0.167425"/>
 </kw>
-<doc>Smoke tests to verify basic system functionality</doc>
-<status status="FAIL" start="2025-10-06T14:16:34.682434" elapsed="0.750362">Suite setup failed:
-WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=140.0.7339.214)
-Stacktrace:
-0   chromedriver                        0x0000000102993274 cxxbridge1$str$ptr + 2882596
-1   chromedriver                        0x000000010298b1a0 cxxbridge1$str$ptr + 2849616
-2   chromedriver                        0x00000001024b5180 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 73420
-3   chromedriver                        0x00000001024ad5b4 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 41728
-4   chromedriver                        0x00000001024a01d0 cxxbridge1$string$len + 4716
-5   chromedriver                        0x00000001024a1bd0 cxxbridge1$string$len + 11372
-6   chromedriver                        0x00000001024a0624 cxxbridge1$string$len + 5824
-7   chromedriver                        0x000000010249ff38 cxxbridge1$string$len + 4052
-8   chromedriver                        0x000000010249fcc4 cxxbridge1$strin...
-    [ Message content over the limit has been removed. ]
-... _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 315092
-15  chromedriver                        0x0000000102956c54 cxxbridge1$str$ptr + 2635268
-16  chromedriver                        0x0000000102959e6c cxxbridge1$str$ptr + 2648092
-17  chromedriver                        0x00000001029385d4 cxxbridge1$str$ptr + 2510724
-18  chromedriver                        0x000000010295a718 cxxbridge1$str$ptr + 2650312
-19  chromedriver                        0x0000000102929d7c cxxbridge1$str$ptr + 2451244
-20  chromedriver                        0x0000000102979dd4 cxxbridge1$str$ptr + 2779012
-21  chromedriver                        0x0000000102979f54 cxxbridge1$str$ptr + 2779396
-22  chromedriver                        0x000000010298adec cxxbridge1$str$ptr + 2848668
-23  libsystem_pthread.dylib             0x000000019b5bec0c _pthread_start + 136
-24  libsystem_pthread.dylib             0x000000019b5b9b80 thread_start + 8</status>
+<status status="FAIL" start="2025-10-11T14:45:04.548727" elapsed="30.836391"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="2" skip="0">All Tests</stat>
+<stat pass="3" fail="3" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Smoke Tests" id="s1" pass="0" fail="2" skip="0">Smoke Tests</stat>
+<stat name="Student Management Test" id="s1" pass="3" fail="3" skip="0">Student Management Test</stat>
 </suite>
 </statistics>
 <errors>

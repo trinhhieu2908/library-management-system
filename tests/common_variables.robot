@@ -10,6 +10,13 @@ ${DASHBOARD_URL}         ${BASE_URL}/dashboard/
 ${BOOK_ISSUE_URL}        ${BASE_URL}/bookissue/
 ${BOOK_RETURN_URL}       ${BASE_URL}/returnbook/
 ${VIEW_ISSUED_BOOK_URL}  ${BASE_URL}/viewissuedbook/
+${ADD_BOOK_URL}          ${BASE_URL}/addbook/
+${EDIT_BOOK_URL}         ${BASE_URL}/editbook/
+${DELETE_BOOK_URL}       ${BASE_URL}/deletebook/
+${SEARCH_BOOK_URL}       ${BASE_URL}/Search/
+${SEARCH_STUDENT_URL}    ${BASE_URL}/Searchstudent/
+${ADD_STUDENT_URL}       ${BASE_URL}/addstudent/
+${VIEW_STUDENTS_URL}     ${BASE_URL}/viewstudents/
 
 # Page Titles
 ${LOGIN_PAGE_TITLE}      Staff Login

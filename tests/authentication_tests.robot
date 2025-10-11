@@ -10,10 +10,10 @@ Test Setup    Set Selenium Speed    0.5s
 
 *** Variables ***
 # Signup Test Data
-${NEW_USERNAME}          user003
+${NEW_USERNAME}          user004
 ${NEW_FIRST_NAME}        Test
-${NEW_LAST_NAME}         User3
-${NEW_EMAIL}             user003@gmail.com
+${NEW_LAST_NAME}         User4
+${NEW_EMAIL}             user004@gmail.com
 ${NEW_PHONE}             0401234567
 ${NEW_PASSWORD}          TestPass123
 ${INVALID_USERNAME}      test-user@123
